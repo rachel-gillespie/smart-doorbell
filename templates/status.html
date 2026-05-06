@@ -18,7 +18,7 @@
       Last press: <strong>{{ last_event.time_str }}</strong><br>
       ({{ last_event.age }} seconds ago)
     </p>
-    <img src="{{ url_for('static', filename='last_visitor.jpg')  }}">
+    <img src="{{ last_event.image }}">
   {% else %}
     <p>No doorbell presses recorded yet.</p>
   {% endif %}

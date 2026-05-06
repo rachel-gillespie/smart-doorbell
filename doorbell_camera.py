@@ -2,9 +2,9 @@
 import time, os
 import json
 from datetime import datetime
-
 from sense_hat import SenseHat
 from picamera2 import Picamera2
+from upload_cloudinary import upload_image
 
 #use os to set up base and static folder 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #get current directory
@@ -52,7 +52,8 @@ try:
             if event.action == "pressed" and event.direction == "middle":
                 print("Doorbell pressed at", datetime.now())
                 capture_photo()
-                save_state(IMAGE_PATH)
+                url = upload_image(IMAGE_PATH)
+                save_state(url)
         time.sleep(0.1)
 except KeyboardInterrupt:
     print("Exiting...")
