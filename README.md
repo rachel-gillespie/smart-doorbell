@@ -77,6 +77,11 @@ The dashboard will be available at `http://<your-pi-ip>:8000`.
 
 Press the SenseHAT joystick (centre) to trigger the doorbell.
 
+## Live Demo
+The web dashboard is deployed on Render: [https://smart-doorbell-n18p.onrender.com/](https://smart-doorbell-n18p.onrender.com/)
+
+> Note: the live demo shows the dashboard UI only. The doorbell trigger requires a physical Raspberry Pi with SenseHAT and camera module.
+
 ## Reference List
 - Cloudinary Python SDK — [Cloudinary docs](https://cloudinary.com/documentation/python_integration)
 - Paho MQTT Python client — [Eclipse Paho docs](https://eclipse.dev/paho/files/paho.mqtt.python/html/client.html)
